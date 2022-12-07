@@ -1,0 +1,28 @@
+# Create a clothing store database
+
+CREATE TABLE store (id integer primary key, item text, brand text, price integer,  aisle integer, colour text);
+
+INSERT INTO store VALUES (1, "Jumper", "Nike", 25, 3, "blue");
+INSERT INTO store VALUES (2, "Jumper", "Nike", 25, 3, "green");
+INSERT INTO store VALUES (3, "Jumper", "Nike", 25, 3, "red");
+INSERT INTO store VALUES (4, "Jeans", "Levis", 30, 4, "black");
+INSERT INTO store VALUES (5, "Jeans", "Levis", 40, 4, "blue");
+INSERT INTO store VALUES (6, "Skirt", "Versace", 50, 6, "pink");
+INSERT INTO store VALUES (7, "Shoes", "Nike", 100, 5, "white");
+INSERT INTO store VALUES (8, "Shoes", "Adidas", 90, 5, "black");
+INSERT INTO store VALUES (9, "Shirt", "Nike", 20, 1, "purple");
+INSERT INTO store VALUES (10, "Shirt", "Nike", 15, 1, "blue");
+INSERT INTO store VALUES (11, "Jumper", "Gucci", 70, 3, "black");
+INSERT INTO store VALUES (12, "Socks", "Adidas", 13, 8, "white");
+INSERT INTO store VALUES (13, "Vest", "Nike", 25, 6, "white");
+INSERT INTO store VALUES (14, "Jumper", "Nike", 25, 3, "white");
+INSERT INTO store VALUES (15, "Jumper", "Nike", 25, 3, "pink");
+
+# Display the database ordered by price.
+SELECT * FROM store ORDER BY price asc;
+
+# What is the total price of the itens in the store?
+SELECT SUM(price) FROM store;
+
+# What is the average price of jumpers? 
+SELECT AVG(price) "Average Price of Jumpers" FROM store WHERE item='Jumper';
