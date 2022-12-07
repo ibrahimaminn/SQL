@@ -21,7 +21,7 @@ INSERT INTO store VALUES (15, "Jumper", "Nike", 25, 3, "pink");
 # Display the database ordered by price.
 SELECT * FROM store ORDER BY price asc;
 
-# What is the total price of the itens in the store?
+# What is the total price of the items in the store?
 SELECT SUM(price) FROM store;
 
 # What is the average price of jumpers? 
